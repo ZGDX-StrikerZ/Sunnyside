@@ -1,0 +1,427 @@
+:root {
+   --clr-soft-red: hsl(7, 99%, 70%);
+   --clr-primary-yellow: hsl(51, 100%, 49%);
+   --clr-primary-dark-cyan: hsl(167, 40%, 24%); /* (graphic design text) */
+   --clr-primary-dark-blue: hsl(198, 62%, 26%); /* (photography text) */
+   --clr-primary-moderate-cyan: hsl(168, 34%, 41%); /* (footer) */
+   --clr-neutral-blue: hsl(212, 27%, 19%);
+   --clr-neutral-dark-grayish: hsl(213, 9%, 39%);
+   --clr-neutral-grayish: hsl(232, 10%, 55%);
+   --clr-neutral-gray-blue: hsl(210, 4%, 67%);
+   --clr-neutral-white: hsl(0, 0%, 100%);
+   --font-barlow: 'Barlow', sans-serif;
+   --font-fraunces: 'Fraunces', serif;;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Hamburger Menu */
+.header{
+    background-image: url(images/mobile/image-header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 30px;
+}
+
+.container h1 {
+    font-family: var(--font-fraunces);
+    font-weight: 900;
+    color: var(--clr-neutral-white);
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    left: -200%;
+    top: 100px;
+    right: 0px;
+}
+
+.navigation ul {
+    width: 100%;
+    background: var(--clr-neutral-white);
+    width: 400px;
+    height: 230px;
+}
+
+.navigation ul li {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.navigation ul li a{
+    padding: 0px 20px;
+    color: var(--clr-neutral-white);
+    font-weight: 550;
+}
+
+.navigation ul li a.active{
+    color: black;
+    font-size: .75rem;
+    font-family: var(--font-fraunces);
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background: var(--clr-primary-yellow);
+    border-radius: 20px;
+    border: 1px solid var;
+}
+.navigation ul li a.active:hover{
+    background-color: var(--clr-neutral-white);
+    opacity: 0.2;
+}
+.change {
+    left: 0;
+}
+/* End Hamburger Menu */
+
+/* Media Quary Hamburger Menu */
+@media (min-width: 679px) {
+    .header {
+        background-image: none;
+        background-image: url(images/desktop/image-header.jpg);
+    }
+    .humburger-menu {
+        display: none;
+    }
+    .container {
+        align-items: normal;
+    }
+    .navigation {
+        align-items: center;
+        flex-direction: row;
+        position: unset;
+    }
+    .navigation ul {
+        display: flex;
+        background: transparent;
+        position: unset;
+    }
+    .navigation ul li {
+        padding-top: 0px;
+    }
+}
+/* End Media Quary Hamburger Menu */
+/* Main Title */
+.container-title h1{
+    font-size: 2rem;
+    font-family: var(--font-fraunces);
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 80px;
+    color: var(--clr-neutral-white);
+    letter-spacing: 10px;
+}
+
+.container-title img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+/* ENd Main Title */
+/* Section */
+.brand-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-info {
+    max-width: 75%;
+    margin: 0 auto;
+}
+.brand-item img {
+    width: 100%;
+}
+
+.brand-item h1 {
+    text-align: center;
+    font-family: var(--font-fraunces);
+    font-weight: 900;
+    font-size: 1.9rem;
+    margin-top: 40px;
+}
+
+.brand-item p {
+    color: var(--clr-neutral-grayish);
+    text-align: center;
+    font-size: .95rem;
+    margin-top: 20px;
+}
+
+.brand-item  .learn-more{
+    margin-bottom: 70px;
+}
+
+.brand-item .learn-more a{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--font-fraunces);
+    font-weight: 900;
+    color: #000;
+}
+
+.graphic-list img{
+    width: 100%;
+    margin-bottom: -5px;
+}
+
+.graphic-design {
+    position: relative;
+}
+
+.info-food {
+    position: absolute;
+    bottom: 100px;
+}
+.info-food h1 {
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: var(--font-fraunces);
+    color: var(--clr-primary-dark-cyan);
+    margin-bottom: 40px;
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+.info-food p {
+    text-align: center;
+    font-family: var(--font-fraunces);
+    color: var(--clr-primary-dark-cyan);
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+/* End Section */
+/* Media Quary Section */
+@media (min-width: 679px) {
+    .container-title h1 {
+        margin-top: -150px;
+    }
+    .brand-item {
+        display: flex;
+        flex-direction: row;
+    }
+    .brand-list img {
+        width: 71%;
+    }
+    .egg {
+        float: right;
+    }
+    .brand-info {
+        float: left;
+    }
+    .brand-item .brand-info h1{
+        font-size: 1.5rem;
+        text-align:unset;
+        max-width: 50%;
+        margin: 0 auto;
+        margin-top: 150px;
+    }
+    .brand-info p{
+        text-align:unset;
+        max-width: 50%;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    .egg{
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        /* optional */
+        -webkit-box-align: start;
+        -moz-box-align: start;
+        -ms-flex-align: start;
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
+      }
+      .brand-info h1{
+        -webkit-box-ordinal-group: 2;
+        -moz-box-ordinal-group: 2;
+        -ms-flex-order: 2;
+        -webkit-order: 2;
+        order: 2;
+      }
+    
+      .egg {
+        -webkit-box-ordinal-group: 1;
+        -moz-box-ordinal-group: 1;
+        -ms-flex-order: 1;
+        -webkit-order: 1;
+        order: 1;
+      }
+      .graphic-list {
+        display: flex;
+      }
+      .graphic-design img{
+        width: 100%;
+        background-size: cover;
+      }
+}
+/* End Media Quary Section */
+/* Footer */
+.footer {
+    max-width: 80%;
+    margin: 0 auto;
+}
+.footer h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--font-fraunces);
+    color: var(--clr-neutral-grayish);
+    letter-spacing: 4px;
+    margin-top: 50px;
+}
+
+.client-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.client-item img{
+    width: 20%;
+    border-radius: 50%;
+    margin-top: 50px;
+}
+
+.client-item p {
+    font-weight: 700;
+    font-family: var(--font-fraunces);
+    color: var(--clr-neutral-dark-grayish);
+    text-align: center;
+    margin: 30px 0px;
+}
+
+.testimonials-name {
+    text-align: center;
+}
+
+.testimonials-name h4 {
+    color: var(--clr-neutral-blue);
+    font-family: var(--font-fraunces);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.testimonials-name h3 {
+    color: var(--clr-neutral-gray-blue);
+    font-size: .85rem;
+}
+
+.footer-img-list {
+    display: flex;
+    margin-top: 100px;
+}
+
+.footer-img-item img {
+    width: 100%;
+    margin-bottom: -5px;
+}
+
+.main-footer {
+    background:#76c2b3;
+}
+
+.footer-info {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.footer-info h1 {
+    text-align: center;
+    font-family: var(--font-fraunces);
+    font-size: 1.6rem;
+    color: var(--clr-primary-dark-cyan);
+    padding-top: 50px;
+}
+
+.footer-info-list ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.footer-info-list ul li a{
+    color: var(--clr-primary-dark-cyan);
+    font-family: var(--font-fraunces);
+    font-size: .85rem;
+}
+
+.social-media{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 70px;
+    padding-bottom: 70px;
+}
+.social-media-item {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social-media-item a {
+    padding: 0px 10px;
+}
+/* End Footer */
+
+/* Media Quary Footer */
+@media (min-width: 679px) {
+    .client-testimonials {
+        display: flex;
+        flex-direction: row;
+    }
+    .client-item {
+        margin-right: 30px;
+    }
+    .thomas {
+        margin-top: -7.6px;
+    }
+    .jennie {
+        margin-top: 2px;
+    }
+    .footer-img-list .footer-img-item {
+        width: 80%;
+    }
+    .footer-info-list ul{
+        justify-content: center;
+    }
+    .footer-info-list ul li {
+        padding-right: 50px;
+    }
+}
+@media (min-width: 1400px){ 
+    .footer-img-list .footer-img-item{
+        display: flex;
+        flex-direction: row;
+    }
+}
+/* End Media Quary Footer */
